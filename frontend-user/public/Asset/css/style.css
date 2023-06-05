@@ -370,7 +370,7 @@ ul.email li i {
 /** banner_main **/
 
 #top_section {
-     background-image: url('../images/banner.jpg');
+     background-image: url('../images/bg.jpg');
      background-size: cover;
      background-repeat: no-repeat;
      padding-top: 120px;
@@ -882,7 +882,7 @@ ul.email li i {
 /** footer **/
 
 .footer {
-     background: #222222;
+     background: #312191;
      padding-top: 90px
 }
 
@@ -893,7 +893,7 @@ ul.email li i {
 }
 
 .ente {
-     color: #000;
+     color: rgb(255, 255, 255);
      border: inherit;
      padding: 0 30px;
      height: 66px;
