@@ -14,7 +14,7 @@ class MNovel extends Model
         ->select(
             "seri AS seri_novel",
             "judul AS judul_novel",
-            "deskripsi_singkat_novel AS deskripsi_singkat_novel",
+            "deskripsi_singkat_novel AS deskripsi_singkat",
             "cover AS cover_novel",
             "deskripsi AS deskripsi_novel",
             "pdf AS link_novel"
