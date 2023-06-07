@@ -139,7 +139,19 @@
                            <div class="container-fluid">
                               <div class="carousel-caption we1_do">
                                  <div class="row">
-                                    <div class="col-md-4">
+                                    @foreach ($novels as $novel)
+                                       <div class="col-md-4">
+                                          <div id="bo_ho" class="we_box text_align_left">
+                                             <i><img src="{{ env('SERVER_URL') . 'storage/' . $novel->cover_novel }}" alt="#"/></i>
+                                             <h3>{{ $novel->judul_novel }} <br>{{ $novel->seri_novel }}</h3>
+                                             <p>
+                                                {{ $novel->deskripsi_singkat_novel }}
+                                             </p>
+                                             <a class="read_more" href="{{ url('/novels/detail/' . $novel->seri_novel) }}">Read More</a>
+                                          </div>
+                                       </div>
+                                    @endforeach
+                                    {{-- <div class="col-md-4">
                                        <div id="bo_ho" class="we_box text_align_left">
                                           <i><img src="Asset/images/vol1.png" alt="#"/></i>
                                           <h3>Seirei Gensouki <br>Volume 1</h3>
@@ -165,12 +177,12 @@
                                           </p>
                                           <a class="read_more" href="#">Read More</a>
                                        </div>
-                                    </div>
+                                    </div> --}}
                                  </div>
                               </div>
                            </div>
                         </div>
-                        <div class="carousel-item">
+                        {{-- <div class="carousel-item">
                            <div class="container-fluid">
                            <div class="carousel-caption we1_do">
                                  <div class="row">
@@ -204,8 +216,8 @@
                                  </div>
                               </div>
                            </div>
-                        </div>
-                        <div class="carousel-item">
+                        </div> --}}
+                        {{-- <div class="carousel-item">
                            <div class="container-fluid">
                            <div class="carousel-caption we1_do">
                                  <div class="row">
@@ -239,7 +251,7 @@
                                  </div>
                               </div>
                            </div>
-                        </div>
+                        </div> --}}
                      </div>
                      <a class="carousel-control-prev" href="#we1" role="button" data-slide="prev">
                      <i class="fa fa-angle-left" aria-hidden="true"></i>

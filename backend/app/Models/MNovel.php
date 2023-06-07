@@ -14,6 +14,7 @@ class MNovel extends Model
         ->select(
             "seri AS seri_novel",
             "judul AS judul_novel",
+            "deskripsi_singkat_novel AS deskripsi_singkat_novel",
             "cover AS cover_novel",
             "deskripsi AS deskripsi_novel",
             "pdf AS link_novel"
@@ -48,11 +49,12 @@ class MNovel extends Model
     }
 
     // buat fungsi untuk simpan data
-    function saveData($seri, $judul, $cover, $deskripsi, $link)
+    function saveData($seri, $deskripsi_singkat, $judul, $cover, $deskripsi, $link)
     {
         DB::table('tb_novel')
         ->insert([
             "seri" => $seri,
+            "deskripsi_singkat_novel" => $deskripsi_singkat,
             "judul" => $judul,
             "cover" => $cover,
             "deskripsi" => $deskripsi,

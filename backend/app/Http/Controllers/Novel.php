@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use App\Models\MNovel;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 
 class Novel extends Controller
 {
@@ -66,6 +67,7 @@ class Novel extends Controller
         // ambil data dari hasil input
         $data = [
             "seri" => $req->seri_novel,
+            "deskripsi_singkat" => Str::limit(strip_tags($req->deskripsi_novel), 160),
             "judul" => $req->judul_novel,
             "cover" => $req->cover_novel,
             "deskripsi" => $req->deskripsi_novel,
@@ -81,7 +83,7 @@ class Novel extends Controller
         if(count($cek_data) == 0) {
         // lakukan proses penyimpanan funsgi data
             $this->model->saveData(
-                $data["seri"],$data["judul"],
+                $data["seri"],$data["deskripsi_singkat"],$data["judul"],
                 $data["cover"],$data["deskripsi"],
                 $data["pdf"]
             );
