@@ -22,13 +22,15 @@ class HomeController extends Controller
     }
 
     // Tampilan Detail
-    // public function detail(String $parameter)
-    // {
-    //     // $data = Http::accept("application/json")->get(env('SERVER_API') . 'novels/'. $parameter)
+    public function detail(String $parameter)
+    {
+        $response = Http::accept("application/json")->get(env('SERVER_API') . 'detail/'. $parameter);
 
-    //     $data = json_decode($data);
+        // dd($response);
+        $data = [
+            "novel" => json_decode($response)->Novel[0]
+        ];
 
-    //     // return view('detail', $data)
-    //     return view('detail')
-    // }
+        return view('detail', $data);
+    }
 }
