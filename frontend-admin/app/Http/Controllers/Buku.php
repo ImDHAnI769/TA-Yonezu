@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 
 use function PHPUnit\Framework\returnSelf;
 
-class Karyawan extends Controller
+class Buku extends Controller
 {
     protected $client;
     //buat konstruktor
@@ -29,21 +29,21 @@ class Karyawan extends Controller
         //tampilkan hasil
         $response = $request->getBody();
 
-        //$data = json_decode($response)->Karyawan;
+        //$data = json_decode($response)->Buku;
         //echo $data;
-        //foreach(json_decode($response)->Karyawan as $data)
+        //foreach(json_decode($response)->Buku as $data)
         //{
-            //echo $data->nama_karyawan."<br>";
+            //echo $data->nama_Buku."<br>";
         //}
         //echo $response;
 
-        $data["result"] = json_decode($response)->Karyawan;
+        $data["result"] = json_decode($response)->buku;
 
-        //panggil view "vw_karyawan"
-        return view("vw_karyawan",$data);
+        //panggil view "vw_Buku"
+        return view("vw_Buku",$data);
     }
 
-    //buat fungsi untuk hapus data karyawan
+    //buat fungsi untuk hapus data Buku
     function delete($kode)
     {
         $parameter = base64_encode($kode);
@@ -56,15 +56,14 @@ class Karyawan extends Controller
         //tampilkan hasil
         $response = $request->getBody();
 
-        //kirim ke "vw_karyawan" (fetch)
+        //kirim ke "vw_Buku" (fetch)
         echo $response;
     }
 
-    // fungsi untuk tambah data karyawan
+    // fungsi untuk tambah data Buku
     function add()
     {
-        // tampilkan view "en_karyawan"
-        return view("en_karyawan");
+        // tampilkan view "en_Buku"
+        return view("en_Buku");
     }
-    
 }

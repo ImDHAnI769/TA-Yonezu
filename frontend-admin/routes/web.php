@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\Karyawan;
+use App\Http\Controllers\Buku;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -18,11 +18,11 @@ use Illuminate\Support\Facades\Route;
 //    return view('welcome');
 //});
 
-//buat route untuk tampil data karyawan
-Route::get("/",[Karyawan::class,'index']);
+//buat route untuk tampil data Buku
+Route::get("/",[Buku::class,'index']);
 
-//buat route untuk hapus data karyawan
-Route::delete("/delete/{parameter}",[Karyawan::class,'delete']);
+//buat route untuk hapus data Buku
+Route::delete("/delete/{parameter}",[Buku::class,'delete']);
 
-//buat route untuk tambah data karyawan
-Route::get("/add",[Karyawan::class,'add']);
+//buat route untuk tambah data Buku
+Route::get("/add",[Buku::class,'add']);
