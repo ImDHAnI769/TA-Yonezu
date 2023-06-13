@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="icon" href="assets/buku.png" />
 
     <!-- csrf token -->
     <meta name="_token" content="{{ csrf_token() }}">
@@ -33,6 +32,7 @@
 
 </head>
 <body class="m-5">
+    <script src="/dist/backend-assets/static/js/components/sidebar.js"></script>
     <div id="app">
         @yield('sidebar_template')
       <div id="main">
@@ -43,26 +43,7 @@
         </header>
 
 
-        <div class="page-content">
-            <div class="row">
-              @yield('nav_template')
-            </div>
-          </div>
-
-        <div class="page-content">
-          <div class="row">
-            @yield('body_template')
-          </div>
-        </div>
-
-        @yield('footer_template')
-      </div>
-    </div>
-    <script src="/dist/backend-assets/static/js/components/dark.js"></script>
-    <script src="/dist/backend-assets/extensions/perfect-scrollbar/perfect-scrollbar.min.js"></script>
-
-    <script src="/dist/backend-assets/compiled/js/app.js"></script>
-    @yield('custom-script')
+    @yield('body_template')
 
 
 <!-- CDN tail -->
@@ -71,5 +52,10 @@
 <!-- cdn fontawesome (js) -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js" integrity="sha512-fD9DI5bZwQxOi7MhYWnnNPlvXdp/2Pj3XSTRrFs5FQa4mizyGLnJcN6tuvUS6LbmgN1ut+XGSABKvjN0H6Aoow==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </body>
+
+<footer class="m-5">
+    @yield('footer_template')
+</footer>
+
 
 </html>
