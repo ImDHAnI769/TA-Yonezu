@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\Buku;
+use App\Http\Controllers\Novel;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -18,11 +18,11 @@ use Illuminate\Support\Facades\Route;
 //    return view('welcome');
 //});
 
-//buat route untuk tampil data Buku
-Route::get("/",[Buku::class,'index']);
+//buat route untuk tampil data Novel
+Route::get("/",[Novel::class,'index']);
 
-//buat route untuk hapus data Buku
-Route::delete("/delete/{parameter}",[Buku::class,'delete']);
+//buat route untuk hapus data Novel
+Route::delete("/delete/{parameter}",[Novel::class,'delete']);
 
-//buat route untuk tambah data Buku
-Route::get("/add",[Buku::class,'add']);
+//buat route untuk tambah data Novel
+Route::get("/add",[Novel::class,'add']);

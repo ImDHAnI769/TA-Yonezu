@@ -1,14 +1,14 @@
-@extends('template_buku')
+@extends('template_novel')
 
 @section('title_template')
-    <title>Tampil Data Buku</title>
+    <title>Tampil Data Novel</title>
 @endsection
 
 @section('body_template')
 
 <!-- buat menu -->
     <nav class="page-heading text-center mb-5">
-        <h3>DATA BUKU DIGITAL</h3>
+        <h3>DATA NOVEL DIGITAL</h3>
     </nav>
 
     <!-- buat menu -->
@@ -24,7 +24,7 @@
             <tr class="bg-blue-400 h-10 text-white">
                 <th class="border-2 border-blue-600 w-1/10">Aksi</th>
                 <th class="border-2 border-blue-600 w-1/10">Seri</th>
-                <th class="border-2 border-blue-600 w-2/10">Judul Buku</th>
+                <th class="border-2 border-blue-600 w-2/10">Judul Novel</th>
                 <th class="border-2 border-blue-600 w-2/10">Cover</th>
                 <th class="border-2 border-blue-600 w-4/10">Deskripsi</th>
                 <th class="border-2 border-blue-600 w-2/10">PDF</th>
@@ -38,15 +38,15 @@
                     <button id="btn-ubah" class="bg-sky-600 w-10 h-10 text-white">
                          <i class="fa-solid fa-pencil"></i>
                      </button>
-                    <button id="btn-hapus" class="bg-rose-600 w-10 h-10 text-white" onclick="gotoDelete('{{$output->kode_buku}}')">
+                    <button id="btn-hapus" class="bg-rose-600 w-10 h-10 text-white" onclick="gotoDelete('{{$output->kode_novel}}')">
                         <i class="fa-solid fa-trash"></i>
                     </button>
                 </td>
-                <td class="text-center border-2 border-blue-600">{{$output->kode_buku}}</p></td>
-                <td class="text-justify border-2 border-blue-600 p-2.5">{{$output->judul_buku}}</p></td>
-                <td class="text-justify border-2 border-blue-600 px-2.5">{{$output->cover_buku}}</p></td>
-                <td class="text-center border-2 border-blue-600">{{$output->deskripsi_buku}}</p></td>
-                <td class="text-justify border-2 border-blue-600 px-2.5">{{$output->pdf_buku}}</p></td>
+                <td class="text-center border-2 border-blue-600">{{$output->kode_novel}}</p></td>
+                <td class="text-justify border-2 border-blue-600 p-2.5">{{$output->judul_novel}}</p></td>
+                <td class="text-justify border-2 border-blue-600 px-2.5">{{$output->cover_novel}}</p></td>
+                <td class="text-center border-2 border-blue-600">{{$output->deskripsi_novel}}</p></td>
+                <td class="text-justify border-2 border-blue-600 px-2.5">{{$output->pdf_novel}}</p></td>
             </tr>
             @endforeach
      </table>
