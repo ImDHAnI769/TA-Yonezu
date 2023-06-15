@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 
 use function PHPUnit\Framework\returnSelf;
 
-class Novel extends Controller
+class Buku extends Controller
 {
     protected $client;
     //buat konstruktor
@@ -29,21 +29,21 @@ class Novel extends Controller
         //tampilkan hasil
         $response = $request->getBody();
 
-        //$data = json_decode($response)->Novel;
+        //$data = json_decode($response)->Buku;
         //echo $data;
-        //foreach(json_decode($response)->Novel as $data)
+        //foreach(json_decode($response)->Buku as $data)
         //{
-            //echo $data->nama_novel."<br>";
+            //echo $data->nama_Buku."<br>";
         //}
         //echo $response;
 
-        $data["result"] = json_decode($response)->novel;
+        $data["result"] = json_decode($response)->buku;
 
-        //panggil view "vw_Novel"
-        return view("vw_novel",$data);
+        //panggil view "vw_Buku"
+        return view("vw_Buku",$data);
     }
 
-    //buat fungsi untuk hapus data Novel
+    //buat fungsi untuk hapus data Buku
     function delete($kode)
     {
         $parameter = base64_encode($kode);
@@ -56,14 +56,21 @@ class Novel extends Controller
         //tampilkan hasil
         $response = $request->getBody();
 
-        //kirim ke "vw_novel" (fetch)
+        //kirim ke "vw_Buku" (fetch)
         echo $response;
     }
 
-    // fungsi untuk tambah data Novel
+    // fungsi untuk tambah data Buku
     function add()
     {
-        // tampilkan view "en_novel"
-        return view("en_novel");
+        // tampilkan view "en_Buku"
+        return view("en_Buku");
+    }
+
+    // fungsi untuk kontak
+    function kontak()
+    {
+        // tampilkan view "kontak"
+        return view("kontak");
     }
 }
