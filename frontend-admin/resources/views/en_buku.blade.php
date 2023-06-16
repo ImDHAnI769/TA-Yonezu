@@ -1,13 +1,13 @@
-@extends('template_novel')
+@extends('template_buku')
 
 @section('title_template')
-    <title>Tambah Data Novel</title>
+    <title>Tambah Data Buku</title>
 @endsection
 
 @section('body_template')
 
 <nav class="page-heading text-center mb-5">
-    <h3>INPUT DATA NOVEL DIGITAL</h3>
+    <h3>INPUT DATA BUKU DIGITAL</h3>
 </nav>
     <!-- section baris pertama -->
     <section class="flex w-full">
